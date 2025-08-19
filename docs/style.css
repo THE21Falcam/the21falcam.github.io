@@ -7,15 +7,20 @@ body {
 section {
     scroll-snap-align: start;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
-.CS1 {
+.parent {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
     background: red;
 }
-
+.child {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+}
 .CS2 {
     background: green;
 }
