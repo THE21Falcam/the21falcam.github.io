@@ -6,50 +6,131 @@
                 scroll-behavior: smooth;
                 scroll-snap-type: y mandatory;
             }
+            /*body {
+                margin: 0;
+                display: grid;
+                place-items: center;
+            }*/
+            html {
+                scroll-behavior: smooth;
+                scroll-snap-type: y mandatory;
+            }
             body {
-                display: block;
                 margin: 0;
             }
             section {
                 scroll-snap-align: start;
-                display: flex;
-                justify-content: center;
                 height: 100vh;
             }
 
-            .About {
-                background: red;
-            }
-            .MainFrame {
+            .about-card {
+                align-items: center;
+                justify-content: center;
                 display: flex;
                 flex-direction: column;
-
-                padding: 5% 10%;
-                align-items: center;
-                justify-content: center;
             }
-            .SubFrame {
-                gap: 2rem;
+            .pad {
+                padding: 25%;
+            }
+            .top-section {
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                gap: 1rem;
                 flex-wrap: wrap;
             }
-            h1 {
-                font-size: 1.5rem;
+
+            .profile {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
             }
 
-            /*@media (max-width: 768px) {
-                h1 {
-                    font-size: 1.5rem;
-                }
+            .avatar {
+                width: 120px;
+                aspect-ratio: 1/1;
+                border-radius: 18px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: linear-gradient(135deg, #29376b, #1b2449);
             }
 
-            @media (max-width: 480px) {
-                h1 {
-                    font-size: 1.5rem;
+            .name-pill {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 600;
+                color: #0b1022;
+                border-radius: 999px;
+            }
+            .role {
+                color: var(--muted);
+                font-size: 14px;
+            }
+
+            .about {
+                flex: 1;
+                background: rgba(255, 255, 255, 0.04);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 16px;
+            }
+            .about .label {
+                display: inline-block;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.18em;
+                color: var(--muted);
+                margin-bottom: 10px;
+            }
+            .about p {
+                margin: 0;
+                line-height: 1.6;
+            }
+
+            .links {
+                display: flex;
+                gap: 14px;
+                justify-content: center;
+                padding-top: 6px;
+            }
+            .link {
+                --size: 44px;
+                width: var(--size);
+                height: var(--size);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 999px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(255, 255, 255, 0.04);
+                text-decoration: none;
+                color: var(--text);
+            }
+            .link:focus {
+                outline: 2px solid var(--accent);
+                outline-offset: 2px;
+            }
+            .link svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            @media (max-width: 1000px) {
+                .pad {
+                    padding: 5%;
                 }
-            }*/
+                .top-section {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .profile {
+                    align-items: center;
+                }
+                .avatar {
+                    margin-bottom: 10px;
+                }
+
+            }
             .CS2 {
                 background: yellow;
             }
@@ -63,36 +144,74 @@
         <title>Home Site</title>
     </head>
     <body>
-        <section class="About" id="1">
-            <div class="MainFrame">
-                <div class="SubFrame">
-                    <div>
-                        <h1>Photo</h1>
-                        <h1>Name</h1>
+        <section class="about-card" aria-label="About Me">
+            <div class="pad">
+                <div class="top-section">
+                    <div class="profile">
+                        <div class="avatar"">
+                            <svg
+                                viewBox="0 0 120 120"
+                                xmlns="http://www.w3.org/2000/svg"
+                                role="img"
+                                aria-label="Avatar icon"
+                            >
+                                <circle cx="60" cy="44" r="22" fill="#98b6ff" />
+                                <rect
+                                    x="18"
+                                    y="78"
+                                    width="84"
+                                    height="34"
+                                    rx="14"
+                                    fill="#98b6ff"
+                                />
+                            </svg>
+                        </div>
+                        <span class="name-pill">
+                            Debanjan Pahari aka Mr Falcam
+                        </span>
+                        <span class="role">
+                            Game Dev • AI Explorer • Student
+                        </span>
                     </div>
-                    <div>
-                        <h1>About</h1>
-                        <h1>
-                            Currently crafting Lonetravelor — an Indie Turn
-                            Based Tractical RPG Game.
-                        </h1>
-                        <h1>
-                            Exploring AI & AI Agents, blending creativity with
-                            intelligence.
-                        </h1>
-                        <h1>
-                            Open to exploring various fields of programming,
-                            because curiosity fuels growth.
-                        </h1>
-                        <h1>
-                            Open to exploring various fields of programming,
-                            because curiosity fuels growth.
-                        </h1>
-                    </div>
+                    <article class="about">
+                        <span class="label">About</span>
+                        <p>
+                            I build playful, strategic experiences and
+                            experiment with AI-driven tools. Currently studying
+                            at Guru Gobind Singh Indraprastha University and
+                            tinkering with turn‑based strategy ideas and lo‑fi
+                            vibes. I build playful, strategic experiences and
+                            experiment with AI-driven tools. Currently studying
+                            at Guru Gobind Singh Indraprastha University and
+                        </p>
+                    </article>
                 </div>
-                <div>
-                    <h1>Links</h1>
-                </div>
+                <nav class="links" aria-label="Social links">
+                    <a class="link" href="#" aria-label="GitHub">
+                        <span> Github </span>
+                    </a>
+                    <a
+                        class="link"
+                        href="mailto:you@example.com"
+                        aria-label="LinkedIn"
+                    >
+                        <span> Linkedin </span>
+                    </a>
+                    <a
+                        class="link"
+                        href="mailto:you@example.com"
+                        aria-label="Email"
+                    >
+                        <span> Email </span>
+                    </a>
+                    <a
+                        class="link"
+                        href="mailto:you@example.com"
+                        aria-label="itch.io"
+                    >
+                        <span> Itch.io </span>
+                    </a>
+                </nav>
             </div>
         </section>
         <section class="CS2" id="2">
