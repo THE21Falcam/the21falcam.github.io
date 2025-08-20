@@ -1,7 +1,33 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="./css/style.css" type="text/css" />
+        <style>
+            html {
+                scroll-snap-type: y mandatory;
+            }
+            body {
+                margin: 0;
+            }
+            section {
+                scroll-snap-align: start;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            .CS1 {
+                background: red;
+            }
+
+            .CS2 {
+                background: yellow;
+            }
+            .CS3 {
+                background: gray;
+            }
+        </style>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Home Site</title>
